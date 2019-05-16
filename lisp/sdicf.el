@@ -81,9 +81,9 @@
       (if (featurep 'mule)
 	  (if (string-match "XEmacs" emacs-version)
 	      (cond
-	       ((memq 'euc-japan-unix (coding-system-list)) 'euc-japan-unix)
+	       ((memq 'utf-8-unix (coding-system-list)) 'utf-8-unix)
 	       ((memq 'euc-jp-unix (coding-system-list)) 'euc-jp-unix))
-	    'euc-japan-unix))
+	    'utf-8-unix))
     (and (boundp 'MULE) *euc-japan*unix))
   "*Default coding system for sdicf.el")
 

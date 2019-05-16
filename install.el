@@ -90,7 +90,7 @@
 
 ;; パッケージのディレクトリ構造を変数に設定
 
-(defvar make-sdic-version "2.1.3")
+(defvar make-sdic-version "2.1.4")
 
 (defvar make-sdic-root-directory (expand-file-name default-directory)
   "パッケージのトップディレクトリ")

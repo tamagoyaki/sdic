@@ -152,10 +152,10 @@ nil 以外が設定されている場合、検索結果表示ウインドウに表示しきれなかった情報があ
   (if (>= emacs-major-version 20)
       (if (string-match "XEmacs" emacs-version)
 	  (cond
-	   ((member 'euc-japan-unix (coding-system-list)) 'euc-japan-unix)
+	   ((member 'utf-8-unix (coding-system-list)) 'utf-8-unix)
 	   ((member 'euc-jp-unix (coding-system-list)) 'euc-jp-unix)
 	   (t 'euc-japan))
-	'euc-japan-unix)
+	'utf-8-unix)
     *euc-japan*unix)
   "*Default coding-system for sdic and libraries.")
 

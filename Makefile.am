@@ -39,7 +39,7 @@ gene.dic: contrib/gene.perl gene.txt
 	@NKF@ -S -e gene.txt | @PERL@ contrib/gene.perl --compat > $@
 
 gene.sdic: contrib/gene.perl gene.txt
-	@NKF@ -S -e gene.txt | @PERL@ contrib/gene.perl > $@
+	@NKF@ -S -e gene.txt | @PERL@ contrib/gene.perl | @NKF@ -E > $@
 
 jgene.dic: contrib/jgene.perl gene.dic
 	@PERL@ contrib/jgene.perl --compat < gene.dic > $@
@@ -71,7 +71,7 @@ waeijirou.sdic: contrib/eijirou.perl
 	@NKF@ -S -e @WAEIJIROU_DIR@/*.txt | @PERL@ contrib/eijirou.perl --waei > $@
 
 jedict.sdic: edict contrib/edict.perl
-	@PERL@ contrib/edict.perl edict > $@
+	@PERL@ contrib/edict.perl edict | @NKF@ -E > $@
 
 j4jwords.sdic: 4jwords contrib/edict.perl
 	@PERL@ contrib/edict.perl 4jwords > $@
